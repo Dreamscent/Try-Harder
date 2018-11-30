@@ -43,3 +43,8 @@ Spawn bash
 
     python -c 'import.pty;pty.spawn("/bin/bash")'
 
+nmap interactive
+
+	nmap --interactive
+	!bash -p
+
