@@ -42,3 +42,6 @@ To remove all duplicates in a dictionary file
 Spawn bash
 
     python -c 'import.pty;pty.spawn("/bin/bash")'
+
+
+Test
