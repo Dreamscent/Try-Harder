@@ -34,3 +34,11 @@ Explanation:
     Threads = -t 10
     Wait for timeout = -w 30
     Output file = -o hydra-http-post-attack.txt
+
+To remove all duplicates in a dictionary file
+
+    cat filename.txt | sort | uniq > outfile.txt
+
+Spawn bash
+
+    python -c 'import.pty;pty.spawn("/bin/bash")'
