@@ -47,4 +47,6 @@ nmap interactive
 
 	nmap --interactive
 	!bash -p
-
+more nmap
+	-sL : list targets to scan
+	-pn : disable port scan(ping sweep?)
