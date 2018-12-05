@@ -50,3 +50,11 @@ nmap interactive
 more nmap
 	-sL : list targets to scan
 	-pn : disable port scan(ping sweep?)
+	
+cool nmap scripts
+	
+	--script=http-enum
+	--script=http-default-accounts
+	--script=http-phpmyadmin-dir-traversal
+List of nmap scripts	
+https://nmap.org/nsedoc/
