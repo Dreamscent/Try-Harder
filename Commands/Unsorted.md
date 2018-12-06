@@ -58,3 +58,14 @@ cool nmap scripts
 	--script=http-phpmyadmin-dir-traversal
 List of nmap scripts	
 https://nmap.org/nsedoc/
+
+
+
+WPSCAN
+
+	wpscan --url <url>
+	
+WPSCAN enumerate users
+	-enumerate u
+	
+	-e ap
