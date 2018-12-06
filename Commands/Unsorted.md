@@ -56,6 +56,11 @@ cool nmap scripts
 	--script=http-enum
 	--script=http-default-accounts
 	--script=http-phpmyadmin-dir-traversal
+	
+
+passing parameters into nmap script example
+
+	nmap -p 3306 <ip> --script mysql-dump-hashes --script-args='username=root,password=secret'
 List of nmap scripts	
 https://nmap.org/nsedoc/
 
