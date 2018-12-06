@@ -5,3 +5,7 @@ Hacking without Metasploit
 Windows Priv Escalation
 
   http://www.fuzzysecurity.com/tutorials/16.html
+
+Some good reading stuff
+
+  https://github.com/etem/oscp-1
