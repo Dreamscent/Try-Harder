@@ -7,7 +7,8 @@ Sudoers File
 
 SUDOers
 
-  sudo -l
+
+    sudo -l
   
  
 Sudoer File Syntax.
