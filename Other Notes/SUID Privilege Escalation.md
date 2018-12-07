@@ -10,7 +10,6 @@ SUDOers
 
     sudo -l
   
- 
 Sudoer File Syntax.
 
   root ALL=(ALL) ALL
