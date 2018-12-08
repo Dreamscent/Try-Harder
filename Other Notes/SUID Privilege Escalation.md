@@ -1,4 +1,5 @@
 ---- Credits to Touhid M.Shaikh @ https://touhidshaikh.com/blog/?p=790 ----
+---- Modified to add my own notes and formatting in ----
 
 
 Sudoers File
@@ -27,6 +28,11 @@ Find out what SUDO permissions you have. The user may run these binary files wit
 
     sudo -l
 
+Also possible to check all files with SUID bits set with
+
+        find / -perm -u=s -type f 2>/dev/null
+        or
+        find / -perm -4000 -type f 2>/dev/null
 ---- Listing ----
 
 Here is a brief list of the exploitable binaries. Exact commands are in next section
