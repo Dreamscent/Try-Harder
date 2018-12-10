@@ -1,11 +1,33 @@
-nmap interactive
+*** Nmap ***
+
+
+Common Nmap Scan Types
+
+	-sT TCP Connect Scan
+	-sS TCP Syn Scan (aka Stealh Scan)
+	-sX Xmas scan
+	-sV Version Scan, get information on services version
+	-sN ???
+	
+Extra Nmap Options
+
+	-p <port(s)> Define Port number(s). Scans 1-1000 only if not specified
+	-p- Scan app ports
+	-A Aggresive Scan (Gets a lot of stuff)
+	-O Gets/Guesses Operating System
+	
+more nmap
+
+	-sL : list targets to scan
+	-pn : disable port scan
+
+
+nmap interactive(for privesc)
 
 	nmap --interactive
 	!bash -p
-more nmap
-	-sL : list targets to scan
-	-pn : disable port scan(ping sweep?)
 	
+
 cool nmap scripts
 	
 	--script=http-enum
