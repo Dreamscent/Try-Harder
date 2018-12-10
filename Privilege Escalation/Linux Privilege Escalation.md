@@ -33,6 +33,8 @@ Also possible to check all files with SUID bits set with
         find / -perm -u=s -type f 2>/dev/null
         or
         find / -perm -4000 -type f 2>/dev/null
+
+
 ---- Listing ----
 
 Here is a brief list of the exploitable binaries. Exact commands are in next section
