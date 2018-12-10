@@ -1,0 +1,11 @@
+# Stuff I need to learn later and add
+
+Buffer overflow
+Local File Inclusion(LFI)
+Remote File Inclusion(RFI)
+FTP
+SMB (139,445?)
+SNMP
+
+Using Curl
+Using multi/handler
