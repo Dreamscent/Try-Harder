@@ -8,3 +8,13 @@ Find theme editors in the control panel, and 404.php in a theme(ideally non acti
 Wordpress reverse shell location
 
 	123.456.78.90/wp-content/themes/twentyfourteen/404.php
+
+
+WPSCAN
+
+	wpscan --url <url>
+	
+WPSCAN enumerate users
+
+	-enumerate u
+	-e ap **uodate this later**
