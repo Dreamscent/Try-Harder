@@ -9,5 +9,5 @@ SNMP
 
 Using Curl
 Using multi/handler
-
+Using msfvenom https://www.hackingarticles.in/msfvenom-tutorials-beginners/
 More Priv Esc https://payatu.com/guide-linux-privilege-escalation/
