@@ -7,6 +7,7 @@ Common Nmap Scan Types
 	-sS TCP Syn Scan (aka Stealh Scan)
 	-sX Xmas scan
 	-sV Version Scan, get information on services version
+	-sU Scan UDP
 	-sN ???
 	
 Extra Nmap Options
