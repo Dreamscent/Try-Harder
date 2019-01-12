@@ -1,5 +1,12 @@
 # Nmap
 
+The "default"
+
+	nmap -sC -sV -oA <ip>
+	-sC All common scripts
+	-sV version scan
+	-oA output all formats
+
 
 Common Nmap Scan Types
 
