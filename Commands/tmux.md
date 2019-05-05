@@ -19,4 +19,3 @@ Resume a session
 ~~~bash
 tmux -S  <session name>
 ~~~
-
