@@ -2,8 +2,6 @@
 
 ___
 
-
-
 ## Easy
 
 
@@ -27,34 +25,68 @@ ___
 
 ## Medium
 
-| No   | Box  | Status | User | Priv Esc | Notes |
-| ---- | ---- | ------ | ---- | -------- | ----- |
-| 1    |      |        |      |          |       |
-| 2    |      |        |      |          |       |
-| 3    |      |        |      |          |       |
-| 4    |      |        |      |          |       |
-| 5    |      |        |      |          |       |
-| 6    |      |        |      |          |       |
-| 7    |      |        |      |          |       |
-| 8    |      |        |      |          |       |
-| 9    |      |        |      |          |       |
-| 10   |      |        |      |          |       |
-| 11   |      |        |      |          |       |
+| No   | Box            | Status | User | Priv Esc | Notes |
+| ---- | -------------- | ------ | ---- | -------- | ----- |
+| 1    | Redcross       |        |      |          |       |
+| 2    | Vault          |        |      |          |       |
+| 3    | Carrier        |        |      |          |       |
+| 4    | Waldo          |        |      |          |       |
+| 5    | Hawk           |        |      |          |       |
+| 6    | Tartarsauce    |        |      |          |       |
+| 7    | DevIios        |        |      |          |       |
+| 8    | Olympus        |        |      |          |       |
+| 9    | Canape         |        |      |          |       |
+| 10   | Poison         |        |      |          |       |
+| 11   | Stratusphere   |        |      |          |       |
+| 12   | Celestial      |        |      |          |       |
+| 13 | Aragog         |        |      |          |       |
+| 14 | Flux Capacitor |        |      |          |       |
+| 15 | Inception      |        |      |          |       |
+| 16 | Enterprise     |        |      |          |       |
+| 17 | Node           |        |      |          |       |
+| 18 | SolidState |        |      |          |       |
+| 19 | Nineveh |        |      |          |       |
+| 20 | Europa |        |      |          |       |
+| 21 | Apocalyst |        |      |          |       |
+| 22 | Sneaky |        |      |          |       |
+| 23 | Lazy |        |      |          |       |
+| 24 | Haircut |        |      |          |       |
+| 25 | CronOS |        |      |          |       |
+| 26 | Tenten |        |      |          |       |
+| 27 | October |        |      |          |       |
+| 28 | Popcorn |        |      |          |       |
+|      |              |        |      |          |       |
 
 
 
 ## Hard
 
-| No   | Box  | Status | User | Priv Esc | Notes |
-| ---- | ---- | ------ | ---- | -------- | ----- |
-| 1    |      |        |      |          |       |
-| 2    |      |        |      |          |       |
-| 3    |      |        |      |          |       |
-| 4    |      |        |      |          |       |
-| 5    |      |        |      |          |       |
-| 6    |      |        |      |          |       |
-| 7    |      |        |      |          |       |
-| 8    |      |        |      |          |       |
-| 9    |      |        |      |          |       |
-| 10   |      |        |      |          |       |
-| 11   |      |        |      |          |       |
+| No   | Box           | Status | User | Priv Esc | Notes |
+| ---- | ------------- | ------ | ---- | -------- | ----- |
+| 1    | Zipper        |        |      |          |       |
+| 2    | Dab           |        |      |          |       |
+| 3    | Oz            |        |      |          |       |
+| 4    | Falafel       |        |      |          |       |
+| 5    | CrimeStoppers |        |      |          |       |
+| 6    | Kotarak       |        |      |          |       |
+| 7    | Shrek         |        |      |          |       |
+| 8    | Calamity      |        |      |          |       |
+| 9    | Holiday       |        |      |          |       |
+| 10   | Charon        |        |      |          |       |
+| 11   | Joker         |        |      |          |       |
+
+
+
+## Insane
+
+| No   | Box           | Status | User | Priv Esc | Notes |
+| ---- | ------------- | ------ | ---- | -------- | ----- |
+| 1    | Reddish       |        |      |          |       |
+| 2    | Mischief      |        |      |          |       |
+| 3    | Nightmare     |        |      |          |       |
+| 4    | Nightmare(v2) |        |      |          |       |
+| 5    | Fulcrum       |        |      |          |       |
+| 6    | Ariekei       |        |      |          |       |
+| 7    | Jail          |        |      |          |       |
+| 8    | Brainfuck     |        |      |          |       |
+
