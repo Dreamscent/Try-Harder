@@ -31,7 +31,6 @@ Match current window
 	export TERM=x256-color (might be diff)
 	stty rows 38 columns 116 (might be diff)
 
-
 ----------------------------------
 
 Listen on Kali
@@ -48,3 +47,16 @@ Standalone 1 liner if does not have socat installed
 
 
 
+# Upgrade Shell to Interactive
+
+---
+
+
+
+~~~bash
+ctrl z
+
+stty raw -echo
+
+fg
+~~~
