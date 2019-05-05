@@ -29,6 +29,14 @@ Spawn bash
 
 
 
+Steghide
+
+~~~bash
+steghide extract -sf file.jpg -p <password>
+~~~
+
+
+
 
 
 
