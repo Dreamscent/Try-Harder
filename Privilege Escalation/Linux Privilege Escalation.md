@@ -31,6 +31,18 @@ Explain 3:  The above command, make the user touhid can from any terminal, run t
 
 
 
+Explanation:
+
+    /denotes  start from the top (root) of the file system and find every directory
+    -permdenotes search for the permissions that follow
+    -u=sdenotes look for files that are owned by the root user
+    -typestates the type of file we are looking for
+    f denotes a regular file not the directories or special files
+    2 denotes to the second file descriptor of the process, i.e. stderr (standard error)
+    > means redirection
+    /dev/null is a special filesystem object that throws away everything written into it.
+
+
 Find out what SUDO permissions you have. The user may run these binary files without as root without password
 
     sudo -l
@@ -254,6 +266,40 @@ Sadly no Shell. But you manage to extract root hash now Crack hash in your machi
 Super long list here:
 
 https://gtfobins.github.io/
+
+
+
+## Shellshocked
+
+
+
+Shellshocked is for machines ~2008
+
+To test and understand further later:
+
+~~~bash
+Ippsec='() {:;}; echo thisisvulnerabletoshellshock' bash -c :
+~~~
+
+if text is echoed, means it was executed and probably vulnerable to shellshock
+
+use `env`, choose one. (this example was from ippsec video on shellshock)
+
+
+
+example chosen: LOGNAME=sunny
+
+/something/something is a file the current user can run with sudo permissions
+
+~~~bash
+LOGNAME='() {:;}; echo thisisvulnerabletoshellshock' sudo /something/something
+~~~
+
+
+
+
+
+
 
 ## Kernel Exploits
 

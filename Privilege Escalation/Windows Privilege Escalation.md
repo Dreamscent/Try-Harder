@@ -55,3 +55,9 @@ Exploit suggester: https://github.com/SecWiki/windows-kernel-exploits/tree/maste
 https://github.com/amonsec/exploit/tree/master/windows/privs
 
 checklist: https://github.com/netbiosX/Checklists/blob/master/Windows-Privilege-Escalation.md
+
+
+
+Windows version of GTFObin
+
+https://lolbas-project.github.io/#
