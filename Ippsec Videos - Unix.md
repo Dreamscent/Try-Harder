@@ -44,7 +44,7 @@
 | 17 | Node           |        |      |          |       |
 | 18 | SolidState |        |      |          |       |
 | 19 | Nineveh |        |      |          |       |
-| 20 | Europa |        |      |          |       |
+| 20 | Europa | Watched | user enum via SSL cert, enumerate host and directories. SQLi on admin login, php injection | cronjob runs a world writable .sh file. | Also a small demo on Sparta |
 | 21 | Apocalyst |        |      |          |       |
 | 22 | Sneaky |        |      |          |       |
 | 23 | Lazy |        |      |          |       |
