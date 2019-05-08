@@ -1,7 +1,5 @@
 # Tmux
 
----
-
 Work in progres
 
 ctrl + b followed by:

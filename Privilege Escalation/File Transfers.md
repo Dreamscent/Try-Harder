@@ -1,9 +1,5 @@
 # File Transfers
 
----
-
-
-
 This makes the entire folder where you executed the command on, available
 
     python -m SimpleHTTPServer 1234

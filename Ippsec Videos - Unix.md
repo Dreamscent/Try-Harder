@@ -1,7 +1,5 @@
 # Ippsec Videos (Unix)
 
-___
-
 ## Easy
 
 

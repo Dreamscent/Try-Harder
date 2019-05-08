@@ -1,7 +1,5 @@
 # Ippsec Videos (Windows)
 
-___
-
 ## Easy
 
 | No   | Box                          | Status | User | Priv Esc | Notes |
