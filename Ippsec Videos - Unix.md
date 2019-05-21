@@ -47,8 +47,8 @@
 | 20 | Europa | Watched | user enum via SSL cert, enumerate host and directories. SQLi on admin login, php injection | cronjob runs a world writable .sh file. | Also a small demo on Sparta |
 | 21 | Apocalyst |        |      |          |       |
 | 22 | Sneaky |        |      |          |       |
-| 23 | Lazy |        |      |          |       |
-| 24 | Haircut |        |      |          |       |
+| 23 | Lazy |        | 2nd order SQL, insufficient cookie entropy - padbuster padding attack | Making a fake "cat" and adding to $PATH |  |
+| 24 | Haircut |        |      |          | Watch next |
 | 25 | CronOS |        |      |          |       |
 | 26 | Tenten |        |      |          |       |
 | 27 | October |        |      |          |       |
