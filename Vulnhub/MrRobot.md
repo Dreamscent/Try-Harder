@@ -24,7 +24,7 @@ PORT    STATE  SERVICE
 
 		echo 192.168.30.130 mrrobot >> /etc/hosts
 
-### Enumerate website
+### Enumerate website (can add -p 80 to speed things up since we only want to enumerate port 80)
 
 		nmap -A --script=http-enum mrrobot
 
@@ -73,6 +73,7 @@ OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
 OS details: Linux 3.10 - 4.11
 Network Distance: 1 hop
 
+stuff like dirbuster or gobuster work just as well
 
 ### Robots.txt
 
