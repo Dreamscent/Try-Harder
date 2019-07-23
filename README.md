@@ -30,7 +30,7 @@ python reverse shell.py
 
 ### Enumeration
 
-nmapAutomator.sh 21y4d @ https://github.com/21y4d/nmapAutomator
+nmapAutomator.sh 21y4d @ https://github.com/21y4d/nmapAutomator [requires gobuster v3.0 or higher]
 
 LinEnum.sh - rebootuser @ https://github.com/rebootuser/LinEnum
 
