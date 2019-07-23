@@ -9,12 +9,17 @@ I have moved my personal notes out of this repo, and will no longer be sharing t
 
 This is a work in progress - Please be patient if I havent listed the credits for original authors. While I may try to keep them updated, the stuff here may not be the latest versions, check out the sources if you want the latest cutting edge stuff.
 
+Some credits are in the file itself as well. Will move them here when I have the time.
+
 ## Scripts
 
 
 ### Shells
+
 windows php reverse shell.php https://github.com/Dhayalanb/windows-php-reverse-shell
+
 php reverse shell.php - pentestmonkey
+
 rshell.js - tbc (was used on some htb box)
 
 
@@ -34,6 +39,8 @@ linprivchecker.py https://www.securitysift.com/download/linuxprivchecker.py
 lse.sh - diego treitos @ https://github.com/diego-treitos/linux-smart-enumeration
 
 onetwopunch.sh - superkojiman @ https://github.com/superkojiman/onetwopunch
+
+unix-privesc-check.sh - pentestmonkey
 
 ## SMB stuff
 
