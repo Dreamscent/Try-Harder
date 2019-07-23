@@ -42,8 +42,12 @@ onetwopunch.sh - superkojiman @ https://github.com/superkojiman/onetwopunch
 
 unix-privesc-check.sh - pentestmonkey
 
-## SMB stuff
+### SMB stuff
 
 smbserver.py
 
 smbver.sh
+
+### BOF
+
+Win32 BOF - 21y4d @ https://github.com/21y4d/Windows_BufferOverflowx32
