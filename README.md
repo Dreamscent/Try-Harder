@@ -16,7 +16,7 @@ Some credits are in the file itself as well. Will move them here when I have the
 
 ### Shells
 
-windows php reverse shell.php https://github.com/Dhayalanb/windows-php-reverse-shell
+windows php reverse shell.php - Dhayalanb @ https://github.com/Dhayalanb/windows-php-reverse-shell
 
 php reverse shell.php - pentestmonkey
 
@@ -51,3 +51,7 @@ smbver.sh
 ### BOF
 
 Win32 BOF - 21y4d @ https://github.com/21y4d/Windows_BufferOverflowx32
+
+## To-Do List (Upcoming stuff)
+
+Add Autorecon by Tib3rus [Dirb based, for compatibility with the OSCP's older Kali image which doesnt use Gobuster 3+)
