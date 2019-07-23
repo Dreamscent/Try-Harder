@@ -25,6 +25,8 @@ python reverse shell.py
 
 ### Enumeration
 
+nmapAutomator.sh 21y4d @ https://github.com/21y4d/nmapAutomator
+
 LinEnum.sh - rebootuser @ https://github.com/rebootuser/LinEnum
 
 linprivchecker.py https://www.securitysift.com/download/linuxprivchecker.py
