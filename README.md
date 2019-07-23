@@ -2,7 +2,7 @@
 
 This is my little repo for storing notes and scripts while preparing for the OSCP. It may contain scripts and other content that are not mine, but stored here for easier Git Pulls into my Kali on various computers. Best effort has been made to make sure original links and credits are given.
 
-I have moved my personal notes out of this repo, and will no longer be sharing them here.
+I have moved my personal notes out of this repo, and will no longer be sharing them here. What you see here will be slowly removed as well when I reorganise.
 
 
 ## Credits 
