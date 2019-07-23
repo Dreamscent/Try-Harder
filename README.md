@@ -1,11 +1,13 @@
 # Try-Harder
 
-This is my little repo for storing notes and scripts while preparing for the OSCP. It may contain scripts and other content that are not mine, but stored here for easier Git Pulls into Kali. Best effort has been made to make sure original links and credits are given.
+This is my little repo for storing notes and scripts while preparing for the OSCP. It may contain scripts and other content that are not mine, but stored here for easier Git Pulls into my Kali on various computers. Best effort has been made to make sure original links and credits are given.
 
 I have moved my personal notes out of this repo, and will no longer be sharing them here.
 
 
-## Credits **WIP - Please be patient if I havent listed the credits**
+## Credits 
+
+This is a work in progress - Please be patient if I havent listed the credits for original authors. While I may try to keep them updated, the stuff here may not be the latest versions, check out the sources if you want the latest cutting edge stuff.
 
 ## Scripts
 
