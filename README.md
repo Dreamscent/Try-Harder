@@ -55,3 +55,7 @@ Win32 BOF - 21y4d @ https://github.com/21y4d/Windows_BufferOverflowx32
 ## To-Do List (Upcoming stuff)
 
 Add Autorecon by Tib3rus [Dirb based, for compatibility with the OSCP's older Kali image which doesnt use Gobuster 3+)
+
+Add PSPY32
+
+Add windows stuff like powerup etc
