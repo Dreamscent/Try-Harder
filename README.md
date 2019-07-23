@@ -17,18 +17,22 @@ rshell.js - tbc (was used on some htb box)
 
 
 webshell.js
+
 python reverse shell.py
 
 
 ### Enumeration
 
 LinEnum.sh - rebootuser @ https://github.com/rebootuser/LinEnum
+
 linprivchecker.py https://www.securitysift.com/download/linuxprivchecker.py
 
 lse.sh - diego treitos @ https://github.com/diego-treitos/linux-smart-enumeration
+
 onetwopunch.sh - superkojiman @ https://github.com/superkojiman/onetwopunch
 
 ## SMB stuff
 
 smbserver.py
+
 smbver.sh
