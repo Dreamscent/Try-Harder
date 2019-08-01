@@ -27,6 +27,7 @@ webshell.js
 
 python reverse shell.py
 
+cmd.jsp webshell SecurityRiskAdvisors @ https://github.com/SecurityRiskAdvisors/cmd.jsp
 
 ### Enumeration
 
