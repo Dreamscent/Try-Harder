@@ -1,0 +1,3 @@
+[submodule "Scripts/Shells/cmd.jsp"]
+	path = Scripts/Shells/cmd.jsp
+	url = https://github.com/SecurityRiskAdvisors/cmd.jsp.git
