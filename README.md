@@ -20,7 +20,7 @@ windows php reverse shell.php - Dhayalanb @ https://github.com/Dhayalanb/windows
 
 php reverse shell.php - pentestmonkey
 
-rshell.js - tbc (was used on some htb box)
+rshell.js - Wiremask @ https://wiremask.eu/writeups/reverse-shell-on-a-nodejs-application/
 
 
 webshell.js
