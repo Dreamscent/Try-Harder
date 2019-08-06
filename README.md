@@ -64,5 +64,7 @@ pspy - DominicBreuker @ https://github.com/DominicBreuker/pspy
 
 ## To-Do List (Upcoming stuff)
 
+Move binaries somewhere else to make github stfu about binaries
 Add windows stuff like powerup.ps1, sherlock.ps1 etc
 Powershell Empire
+https://github.com/GDSSecurity/Windows-Exploit-Suggester
