@@ -45,6 +45,8 @@ unix-privesc-check.sh - pentestmonkey
 
 autorecon-master - Tib3rius @ https://github.com/Tib3rius/AutoRecon [Dirb based, for compatibility with the OSCP's older Kali image which doesnt use Gobuster 3+)
 
+windows-exploit-suggester.py - https://github.com/GDSSecurity/Windows-Exploit-Suggester
+
 ### SMB stuff
 
 smbserver.py
