@@ -56,15 +56,8 @@ smbver.sh
 Win32 BOF - 21y4d @ https://github.com/21y4d/Windows_BufferOverflowx32
 
 
-## Binaries
-
-nc for windows - https://eternallybored.org/misc/netcat/
-
-pspy - DominicBreuker @ https://github.com/DominicBreuker/pspy
-
 ## To-Do List (Upcoming stuff)
 
-Move binaries somewhere else to make github stfu about binaries
 Add windows stuff like powerup.ps1, sherlock.ps1 etc
 Powershell Empire
 https://github.com/GDSSecurity/Windows-Exploit-Suggester
