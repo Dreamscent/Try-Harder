@@ -22,12 +22,13 @@ php reverse shell.php - pentestmonkey
 
 rshell.js - Wiremask @ https://wiremask.eu/writeups/reverse-shell-on-a-nodejs-application/
 
-
 webshell.js
 
 python reverse shell.py
 
-cmd.jsp webshell SecurityRiskAdvisors @ https://github.com/SecurityRiskAdvisors/cmd.jsp
+cmd.jsp webshell - SecurityRiskAdvisors @ https://github.com/SecurityRiskAdvisors/cmd.jsp
+
+python pty shells - infodox @ https://github.com/infodox/python-pty-shells
 
 ### Enumeration
 
