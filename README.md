@@ -48,6 +48,10 @@ autorecon-master - Tib3rius @ https://github.com/Tib3rius/AutoRecon [Dirb based,
 
 windows-exploit-suggester.py - https://github.com/GDSSecurity/Windows-Exploit-Suggester
 
+Sherlock.ps1 - https://github.com/rasta-mouse/Sherlock
+
+Powerup.ps1 - https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
+
 ### SMB stuff
 
 smbserver.py
