@@ -58,6 +58,17 @@ smbserver.py
 
 smbver.sh
 
+## Windows Stuff
+
+Powerless.bat
+
+Powerup.ps1
+
+Sherlock.ps1
+
+Invoke-PowerShellTcp.ps1
+
+
 ### BOF
 
 Win32 BOF - 21y4d @ https://github.com/21y4d/Windows_BufferOverflowx32
