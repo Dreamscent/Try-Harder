@@ -52,6 +52,11 @@ Sherlock.ps1 - https://github.com/rasta-mouse/Sherlock
 
 Powerup.ps1 - https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc
 
+
+beRoot - https://github.com/AlessandroZ/BeRoot/tree/master/Windows
+
+wmic_info.at - https://www.fuzzysecurity.com/scripts/13.html
+
 ### SMB stuff
 
 smbserver.py
