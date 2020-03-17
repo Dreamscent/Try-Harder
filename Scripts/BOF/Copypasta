@@ -22,7 +22,7 @@ Jump Location:
 
 cat pattern | xclip -sel clip
 
-/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q 37684136 -l 500
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -q <query> -l <patternlength>
 !mona findmsp
 
 
