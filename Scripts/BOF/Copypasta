@@ -1,7 +1,8 @@
-IP: 192.1.1.1
+Target IP: 192.1.1.1
 Port:
 
 Vulnerable Command: ?
+
 Crashed at: 
 
 EIP at crash:
@@ -15,8 +16,10 @@ Bad Chars:
 
 Vulnerable Module:
 
-Jump Location:
+Jump ESP Location:
 
+
+Commands:
 
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 500 > pattern
 
